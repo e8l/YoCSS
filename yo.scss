@@ -1,0 +1,47 @@
+$text-color: #FFF;
+
+$turquoise: #1ABC9C;
+$emerald:   #2ECC71;
+$peter:     #3498DB;
+$asphalt:   #34495E;
+$green:     #16A085;
+$sunflower: #F1C40F;
+$belize:    #F1C40F;
+$wisteria:  #8E44AD;
+$alizarin:  #E74C3C;
+$amethyst:  #9B59B6;
+$colors: $turquoise, $emerald, $peter, $asphalt, $green, $sunflower, $belize, $wisteria, $alizarin, $amethyst;
+
+$row-height: 89px;
+
+$font: 'Montserrat';
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:700);
+@charset 'utf-8';
+
+@for $i from 1 through length($colors) {
+  .color#{$i} {
+    background-color: nth($colors, $i);
+  }
+}
+
+.yo {
+  color: $text-color;
+  background-color: $amethyst;
+  font-family: $font, sans-serif;
+  position: relative;
+
+  .menu {
+    background-color: $alizarin;
+  }
+
+  .row {
+    margin: 0;
+    display: block;
+    width: 100%;
+    height: $row-height;
+    line-height: $row-height;
+    text-align: center;
+  }
+}
+
